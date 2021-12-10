@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="fontawesome/fontawesome-free-5.14.0-web/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container py-5 my-5 z-depth-1" style="border-radius: 16px;">
+        <div class="card-header py-3 peach-gradient  btn-radius-number">
+            <h6 class="m-0 font-weight-bold text-white">Calculadora</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive" id="main">
+                <div class="p-3">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- parte de numero magico -->
+                            <div class="card shadow mb-4 p-2 color-bg-targe btn-radius-number">
+                                <label for="exampleSelect1">
+									<h4 class="py-2"><span class="badge badge-pill color-bg p-2">Calculadora!</span></h4>
+								</label>
+                                <!--Card Regular-->
+                                <div class="px-5">
+                                    <div class="card card-cascade color-bg narrower btn-radius-number mb-4">
+                                        <!--Card image-->
+                                        <div class="view view-cascade overlay">
+                                            <div colspan="4">
+                                                <div class="respuesta" id="respuesta">
+                                                    <span id="view-number" class="p-3">
+														<p class="view-letf" id="viewletf" name="viewletf">0</p>
+													</span>
+                                                    <span id="result" class="p-3">
+														<p class="view-letf" id="resultado" name="resultado">0</p>
+													</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--/.Card image-->
+                                        <!--Card content-->
+                                        <div class="card-body card-body-cascade text-center">
+                                            <div class="col-md-12">
+                                                <button type="button" id="reset" name="reset" class="btn btn-radius-number px-6 waves-effect waves-light color-simbol">
+													<div class="class-number">C</div>
+												</button>
+                                                <!--<button type="button" id="masOmenos"  name="masOmenos"  class="btn btn-radius-number px-4 waves-effect waves-light color-simbol">
+													<div class="class-number">±</div>
+												</button>
+												<button type="button" id="porsentage" name="porsentage" class="btn btn-radius-number px-4 waves-effect waves-light color-simbol">
+													<i class="fas fa-percent"></i>
+												</button>-->
+                                                <button type="button" id="borrar" name="borrar" class="btn btn-radius-number px-6 waves-effect waves-light peach-gradient">
+													<i class="fas fa-backspace"></i>
+												</button>
+
+                                                <button type="button" id="siete" name="siete" class="btn btn-radius-number px-4 waves-effect waves-light color-number">
+													<div class="class-number">7</div>
+												</button>
+                                                <button type="button" id="ocho" name="ocho" class="btn btn-radius-number px-4 waves-effect waves-light color-number">
+													<div class="class-number">8</div>
+												</button>
+                                                <button type="button" id="nueve" name="nueve" class="btn btn-radius-number px-4 waves-effect waves-light color-number">
+													<div class="class-number">9</div>
+												</button>
+                                                <button type="button" id="division" name="division" class="btn btn-radius-number px-4 waves-effect waves-light peach-gradient">
+													<i class="fas fa-divide"></i>
+												</button>
+
+                                                <button type="button" id="cuatro" name="cuatro" class="btn btn-radius-number px-4 waves-effect waves-light color-number">
+													<div class="class-number">4</div>
+												</button>
+                                                <button type="button" id="cinco" name="cero" class="btn btn-radius-number px-4 waves-effect waves-light color-number">
+													<div class="class-number">5</div>
+												</button>
+                                                <button type="button" id="seis" name="cero" class="btn btn-radius-number px-4 waves-effect waves-light color-number">
+													<div class="class-number">6</div>
+												</button>
+                                                <button type="button" id="multiplicacion" name="multiplicacion" class="btn btn-radius-number px-4 waves-effect waves-light peach-gradient">
+													<i class="fas fa-times"></i>
+												</button>
+
+                                                <button type="button" id="uno" name="uno" class="btn btn-radius-number px-4 waves-effect waves-light color-number"><div class="class-number">1</div></button>
+                                                <button type="button" id="dos" name="dos" class="btn btn-radius-number px-4 waves-effect waves-light color-number"><div class="class-number">2</div></button>
+                                                <button type="button" id="tres" name="tres" class="btn btn-radius-number px-4 waves-effect waves-light color-number"><div class="class-number">3</div></button>
+                                                <button type="button" id="resta" name="resta" class="btn btn-radius-number px-4 waves-effect waves-light peach-gradient"><i class="fas fa-minus"></i></button>
+
+                                                <button type="button" id="cero" name="cero" class="btn btn-radius-number px-4 waves-effect waves-light color-number"><div class="class-number">0</div></button>
+                                                <button type="button" id="punto" name="punto" class="btn btn-radius-number px-4 waves-effect waves-light color-number"><div class="class-number">.</div></button>
+                                                <button type="button" id="igual" name="igual" class="btn btn-radius-number px-4 waves-effect waves-light peach-gradient"><i class="fas fa-equals"></i></button>
+                                                <button type="button" id="suma" name="suma" class="btn btn-radius-number px-4 waves-effect waves-light peach-gradient"><i class="fas fa-plus"></i></button>
+
+                                            </div>
+                                        </div>
+                                        <!--/.Card content-->
+                                    </div>
+                                </div>
+                                <!--/.Card Regular-->
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <!-- parte de instrucciones y ayuda -->
+                            <div class="card shadow mb-4 p-2 color-bg-targe btn-radius-number">
+                                <label for="exampleSelect1">
+									<h4 class="py-2"><span class="badge badge-pill color-bg p-2">Historial</span></h4>
+								</label>
+                                <!--Card Regular-->
+                                <div class="px-5">
+                                    <div class="card card-cascade color-bg narrower btn-radius-number mb-4">
+                                        <div class="btn-float-history">
+                                            <button type="button" class="btn btn-rounded btn-amber waves-effect waves-light" onclick="delet()"><i class="fas fa-trash pr-2" aria-hidden="true"></i>Borrar</button>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="history" name="history" class="card history p-3  btn-radius-number">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!--Sweetalert-->
+    <script type="text/javascript" src="js/sweetalert/sweetalert.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
